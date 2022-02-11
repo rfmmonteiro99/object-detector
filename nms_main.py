@@ -19,13 +19,13 @@ cap.set(10,70)
 
 # Get all the classes in a list: ['person', 'bicycle', 'car', ..., 'hair brush']
 classNames = []
-classFile = 'coco.names'
+classFile = 'data/coco.names'
 with open(classFile, 'rt') as f:
     classNames = f.read().rstrip('\n').split('\n')
 
 # Get paths to the pre-trained network
-configPath = 'ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt'
-weightsPath = 'frozen_inference_graph.pb'
+configPath = 'data/ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt'
+weightsPath = 'data/frozen_inference_graph.pb'
 
 net = cv2.dnn_DetectionModel(weightsPath, configPath)
 
